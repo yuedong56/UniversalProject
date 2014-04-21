@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2E9A6057-310E-43D0-A4E5-C578617F98C7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>LYUniversalProject</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1A183513-063F-4592-A929-431E63E9A310</key>
+		<string>https://github.com/yuedong56/UniversalProject.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>LYUniversalProject/LYUniversalProject.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1A183513-063F-4592-A929-431E63E9A310</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/yuedong56/UniversalProject.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1A183513-063F-4592-A929-431E63E9A310</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1A183513-063F-4592-A929-431E63E9A310</string>
+			<key>IDESourceControlWCCName</key>
+			<string>LYUniversalProject</string>
+		</dict>
+	</array>
+</dict>
+</plist>
