@@ -64,7 +64,7 @@
 		3005BB041904C8040006406B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3005BB031904C8040006406B /* MapKit.framework */; };
 		3005BB061904C80B0006406B /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3005BB051904C80B0006406B /* AssetsLibrary.framework */; };
 		302303791904EA3400D29030 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 302303781904EA3400D29030 /* icon.png */; };
-		30306A7F190765EA0001D4C3 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A75190765EA0001D4C3 /* EGORefreshTableHeaderView.m */; };
+		30306A7F190765EA0001D4C3 /* EGORefreshTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A75190765EA0001D4C3 /* EGORefreshTableHeaderView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		30306A80190765EA0001D4C3 /* blackArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30306A77190765EA0001D4C3 /* blackArrow.png */; };
 		30306A81190765EA0001D4C3 /* blackArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30306A78190765EA0001D4C3 /* blackArrow@2x.png */; };
 		30306A82190765EA0001D4C3 /* blueArrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 30306A79190765EA0001D4C3 /* blueArrow.png */; };
