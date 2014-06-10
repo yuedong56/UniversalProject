@@ -38,6 +38,7 @@
 {
     if (![self checkNetWorkStateAndShowAlertView])
     {
+        block(nil,nil);
         return;
     }
     
@@ -71,6 +72,7 @@
 {
     if (![self checkNetWorkStateAndShowAlertView])
     {
+        block(nil,nil);
         return;
     }
     
