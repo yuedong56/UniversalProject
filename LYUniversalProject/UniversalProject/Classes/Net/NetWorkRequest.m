@@ -33,7 +33,7 @@
  * @brief 启动一个get请求
  */
 + (void)startGetRequestWithURL:(NSString *)urlStr
-                    requestKey:(NSString *)key
+               requestUserName:(NSString *)userName
                          block:(void(^)(NSDictionary *jsonDic, NSError *error))block
 {
     if (![self checkNetWorkStateAndShowAlertView])
@@ -46,6 +46,7 @@
     urlStr = [urlStr stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSURL *url = [NSURL URLWithString:urlStr];
     __unsafe_unretained __block ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:url];
+    if (userName) request.username = userName;
     
     [request setCompletionBlock:^{
         if ([request error]) {
@@ -67,7 +68,7 @@
  */
 + (void)startPostRequestWithURL:(NSString *)urlStr
                      parameters:(NSDictionary *)parameters
-                     requestKey:(NSString *)key
+                requestUserName:(NSString *)userName
                           block:(void(^)(NSDictionary *jsonDic, NSError *error))block
 {
     if (![self checkNetWorkStateAndShowAlertView])
@@ -81,11 +82,12 @@
     NSURL *url = [NSURL URLWithString:urlStr];
     
     __unsafe_unretained __block ASIFormDataRequest *request = [ASIFormDataRequest requestWithURL:url];
+    if (userName) request.username = userName;
     [request setRequestMethod:@"POST"];
     
-    NSString *body = [self toJsonStringWithData:parameters];
-    
-    [request setPostValue:body forKey:key?key:@"data"];
+    for (NSString *key in [parameters allKeys]) {
+        [request setPostValue:[parameters objectForKey:key] forKey:key];
+    }
     
     [request setCompletionBlock:^{
         if ([request error]) {
@@ -120,9 +122,9 @@
 {
     NSError *error = nil;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
-    if ([jsonData length] > 0 && error == nil){
+    if ([jsonData length] > 0 && error == nil) {
         return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
-    }else{
+    } else {
         return nil;
     }
 }
