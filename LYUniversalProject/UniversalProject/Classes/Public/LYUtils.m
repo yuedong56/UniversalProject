@@ -17,7 +17,7 @@
  * @brief 检查网络是否可用
  */
 + (BOOL)checkNetworkAvailable {
-	Reachability *reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
     
     if (status == NotReachable) {
@@ -31,7 +31,7 @@
  * @brief 检查网络状态类型（wifi、2G/3G）
  */
 + (NetworkStatus)checkNetworkStateType {
-	Reachability *reach = [Reachability reachabilityWithHostName:@"www.baidu.com"];
+	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
 	return status;
 }
