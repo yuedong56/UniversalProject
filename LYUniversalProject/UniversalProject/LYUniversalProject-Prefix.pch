@@ -45,6 +45,10 @@
 #define DarkGrayColor [UIColor darkGrayColor]        //深灰色
 #define RedColor [UIColor redColor]
 
+//16进制的颜色
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+
+
 //图片
 #define ImageWithFile(name) ([UIImage imageWithContentsOfFile:[[NSBundle mainBundle] pathForResource:name ofType:nil]])
 #define ImageNamed(name) [UIImage imageNamed:name]
