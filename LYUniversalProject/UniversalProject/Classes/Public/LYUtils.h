@@ -14,25 +14,26 @@
 
 #pragma 通用公共方法
 
-/**
- * @brief 检查网络是否可用
- */
+/** 检查网络是否可用 */
 + (BOOL)checkNetworkAvailable;
 
-/**
- * @brief 检查网络状态类型（wifi、2G/3G）
- */
+/** 检查网络状态类型（wifi、2G/3G）*/
 + (NetworkStatus)checkNetworkStateType;
 
-/** 
- * @brief md5 16位加密 （小写）
- */
+/** 将json字符串转为字典(NSDictionary) */
++ (NSDictionary *)toDictionaryWithJsonString:(NSString *)jsonStr;
+
+/** 将id类型(如NSArray、NSDictionary)转为json字符串 */
++ (NSString *)toJsonStringWithData:(id)data;
+
+/** md5 16位加密 （小写）*/
 + (NSString *)md5:(NSString *)str;
 
-/**
- * @brief 获取photo句柄单例
- */
+/** 获取photo句柄单例 */
 + (ALAssetsLibrary *)defaultAssetsLibrary;
+
+/** 评分、升级 */
++ (void)jumpToAppstore;
 
 #pragma mark - 本工程公共方法
 

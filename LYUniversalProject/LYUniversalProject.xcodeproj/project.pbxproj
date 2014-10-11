@@ -75,6 +75,7 @@
 		30306A87190765EB0001D4C3 /* whiteArrow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 30306A7E190765EA0001D4C3 /* whiteArrow@2x.png */; };
 		30306A8E190766290001D4C3 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A8B190766290001D4C3 /* UIView+Helper.m */; };
 		30306A8F190766290001D4C3 /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A8D190766290001D4C3 /* UIViewController+Helper.m */; };
+		30D25F2D19E918E90065AF67 /* LYSandBoxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -203,6 +204,8 @@
 		30306A8B190766290001D4C3 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		30306A8C190766290001D4C3 /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
 		30306A8D190766290001D4C3 /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
+		30D25F2B19E918E90065AF67 /* LYSandBoxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSandBoxManager.h; sourceTree = "<group>"; };
+		30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSandBoxManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -471,6 +474,8 @@
 				3005BACC1904C7BC0006406B /* LYUtils.m */,
 				3005BAC91904C7BC0006406B /* LYUserInfo.h */,
 				3005BACA1904C7BC0006406B /* LYUserInfo.m */,
+				30D25F2B19E918E90065AF67 /* LYSandBoxManager.h */,
+				30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */,
 				3005BACD1904C7BC0006406B /* GlobalConfig.h */,
 				3005BAC61904C7BC0006406B /* Category */,
 			);
@@ -678,6 +683,7 @@
 				3005BADC1904C7BC0006406B /* FMDatabaseQueue.m in Sources */,
 				3005BAEF1904C7BC0006406B /* NetWorkRequest.m in Sources */,
 				30306A8F190766290001D4C3 /* UIViewController+Helper.m in Sources */,
+				30D25F2D19E918E90065AF67 /* LYSandBoxManager.m in Sources */,
 				3005BAD01904C7BC0006406B /* ASIAuthenticationDialog.m in Sources */,
 				3005BAE81904C7BC0006406B /* SDWebImagePrefetcher.m in Sources */,
 				3005BAED1904C7BC0006406B /* UIImageView+WebCache.m in Sources */,

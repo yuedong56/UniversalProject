@@ -13,9 +13,7 @@
 
 #pragma mark - 通用公共方法
 
-/**
- * @brief 检查网络是否可用
- */
+/** 检查网络是否可用 */
 + (BOOL)checkNetworkAvailable {
 	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
@@ -27,18 +25,35 @@
     }
 }
 
-/**
- * @brief 检查网络状态类型（wifi、2G/3G）
- */
+/** 检查网络状态类型（wifi、2G/3G）*/
 + (NetworkStatus)checkNetworkStateType {
 	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
 	return status;
 }
 
-/**
- * @brief md5 16位加密 （小写）
- */
+/** 将json字符串转为字典(NSDictionary) */
++ (NSDictionary *)toDictionaryWithJsonString:(NSString *)jsonStr
+{
+    NSData *jsonData = [jsonStr dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *error = nil;
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:kNilOptions error:&error];
+    return jsonDic;
+}
+
+/** 将id类型(如NSArray、NSDictionary)转为json字符串 */
++ (NSString *)toJsonStringWithData:(id)data
+{
+    NSError *error = nil;
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:data options:NSJSONWritingPrettyPrinted error:&error];
+    if ([jsonData length] > 0 && error == nil) {
+        return [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
+    } else {
+        return nil;
+    }
+}
+
+/** md5 16位加密 （小写）*/
 + (NSString *)md5:(NSString *)str
 {
     const char *cStr = [str UTF8String];
@@ -51,9 +66,7 @@
     return [hash lowercaseString];
 }
 
-/**
- * @brief 获取photo句柄单例
- */
+/** 获取photo句柄单例 */
 + (ALAssetsLibrary *)defaultAssetsLibrary
 {
     static dispatch_once_t pred = 0;
@@ -63,6 +76,13 @@
                       library = [[ALAssetsLibrary alloc] init];
                   });
     return library;
+}
+
+/** 评分、升级 */
++ (void)jumpToAppstore
+{
+    NSString *iTunesLink = [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@?mt=8", AppID];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:iTunesLink]];
 }
 
 #pragma mark - 本工程公共方法
