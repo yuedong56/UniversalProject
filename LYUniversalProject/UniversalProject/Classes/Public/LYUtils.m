@@ -15,7 +15,7 @@
 
 /** 检查网络是否可用 */
 + (BOOL)checkNetworkAvailable {
-	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
+	Reachability *reach = [Reachability reachabilityWithHostname:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
     
     if (status == NotReachable) {
@@ -27,7 +27,7 @@
 
 /** 检查网络状态类型（wifi、2G/3G）*/
 + (NetworkStatus)checkNetworkStateType {
-	Reachability *reach = [Reachability reachabilityWithHostName:@"www.apple.com"];
+	Reachability *reach = [Reachability reachabilityWithHostname:@"www.apple.com"];
     NetworkStatus status = [reach currentReachabilityStatus];
 	return status;
 }
@@ -58,7 +58,7 @@
 {
     const char *cStr = [str UTF8String];
     unsigned char result[16];
-    CC_MD5(cStr, strlen(cStr), result);
+    CC_MD5(cStr, (CC_LONG)strlen(cStr), result);
     NSMutableString *hash = [NSMutableString string];
     for (int i = 0; i < 16; i++) {
         [hash appendFormat:@"%02X", result[i]];

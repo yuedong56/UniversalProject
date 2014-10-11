@@ -10,7 +10,7 @@
 #define DataFileName @"DataFileName.sqlite" //数据库文件名
 
 #import <Foundation/Foundation.h>
-#import "FMDatabase.h"
+#import <FMDatabase.h>
 
 @interface DataManager : NSObject
 
