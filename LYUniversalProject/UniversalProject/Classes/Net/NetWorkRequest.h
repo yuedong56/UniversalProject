@@ -8,6 +8,8 @@
 //  网络请求
 
 #import <Foundation/Foundation.h>
+#import "Reachability.h"
+
 #import <ASIHTTPRequest.h>
 #import <ASIFormDataRequest.h>
 

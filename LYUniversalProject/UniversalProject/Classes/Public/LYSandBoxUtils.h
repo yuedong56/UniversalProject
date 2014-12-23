@@ -1,5 +1,5 @@
 //
-//  LYSandBoxManager.h
+//  LYSandBoxUtils.h
 //  LYUniversalProject
 //
 //  Created by 老岳 on 14-10-11.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LYSandBoxManager : NSObject
+@interface LYSandBoxUtils : NSObject
 
 #pragma mark - 公共方法
 /** 获取沙盒里 Home 目录 */

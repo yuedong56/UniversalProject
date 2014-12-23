@@ -10,10 +10,23 @@
 #define _____ios_GlobalConfig_h
 
 #import "LYAppDelegate.h"
-#import "Reachability.h"
 #import "NetWorkRequest.h"
-#import "LYUtils.h"
 #import "DataManager.h"
+
+#import "NSString+Helper.h"
+
+#import "UIView+Helper.h"
+#import "UIViewController+Helper.h"
+#import "UILabel+Common.h"
+#import "UIButton+Common.h"
+#import "UIImageView+Common.h"
+#import "UIAlertView+Common.h"
+
+#import "LYUtils.h"
+#import "LYUserInfo.h"
+#import "LYSandBoxUtils.h"
+#import "LYEncryptUtils.h"
+#import "LYTimeUtils.h"
 
 //AppDelegate
 #define APP_DELEGATE ((LYAppDelegate *)[[UIApplication sharedApplication] delegate])
@@ -73,6 +86,9 @@
 
 //系统版本
 #define  IOS_Version  [NSString stringWithFormat:@"%@",[[UIDevice currentDevice] systemVersion]]
+
+//从后台取数据时转为string格式
+#define Str(str) (str ? [NSString stringWithFormat:@"%@", str] : nil)
 
 #endif
 

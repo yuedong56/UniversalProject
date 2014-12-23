@@ -37,7 +37,13 @@
 		302303791904EA3400D29030 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 302303781904EA3400D29030 /* icon.png */; };
 		30306A8E190766290001D4C3 /* UIView+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A8B190766290001D4C3 /* UIView+Helper.m */; };
 		30306A8F190766290001D4C3 /* UIViewController+Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 30306A8D190766290001D4C3 /* UIViewController+Helper.m */; };
-		30D25F2D19E918E90065AF67 /* LYSandBoxManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */; };
+		308FC7A71A4939640091133F /* UILabel+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FC7A61A4939640091133F /* UILabel+Common.m */; };
+		308FC7AA1A49398D0091133F /* UIButton+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FC7A91A49398D0091133F /* UIButton+Common.m */; };
+		308FC7AD1A4939B00091133F /* UIImageView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FC7AC1A4939B00091133F /* UIImageView+Common.m */; };
+		308FC7B01A495AD90091133F /* UIAlertView+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = 308FC7AF1A495AD90091133F /* UIAlertView+Common.m */; };
+		30B42DFA1A49012A00D8DA5B /* LYEncryptUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B42DF91A49012A00D8DA5B /* LYEncryptUtils.m */; };
+		30B42DFD1A4908A000D8DA5B /* LYTimeUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30B42DFC1A4908A000D8DA5B /* LYTimeUtils.m */; };
+		30D25F2D19E918E90065AF67 /* LYSandBoxUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D25F2C19E918E90065AF67 /* LYSandBoxUtils.m */; };
 		4C96CDE7FF87F06A383794F6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2172F0D67C593033CB1A445 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -94,8 +100,20 @@
 		30306A8B190766290001D4C3 /* UIView+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Helper.m"; sourceTree = "<group>"; };
 		30306A8C190766290001D4C3 /* UIViewController+Helper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Helper.h"; sourceTree = "<group>"; };
 		30306A8D190766290001D4C3 /* UIViewController+Helper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Helper.m"; sourceTree = "<group>"; };
-		30D25F2B19E918E90065AF67 /* LYSandBoxManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSandBoxManager.h; sourceTree = "<group>"; };
-		30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSandBoxManager.m; sourceTree = "<group>"; };
+		308FC7A51A4939640091133F /* UILabel+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Common.h"; sourceTree = "<group>"; };
+		308FC7A61A4939640091133F /* UILabel+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Common.m"; sourceTree = "<group>"; };
+		308FC7A81A49398D0091133F /* UIButton+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+Common.h"; sourceTree = "<group>"; };
+		308FC7A91A49398D0091133F /* UIButton+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+Common.m"; sourceTree = "<group>"; };
+		308FC7AB1A4939B00091133F /* UIImageView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Common.h"; sourceTree = "<group>"; };
+		308FC7AC1A4939B00091133F /* UIImageView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Common.m"; sourceTree = "<group>"; };
+		308FC7AE1A495AD90091133F /* UIAlertView+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Common.h"; sourceTree = "<group>"; };
+		308FC7AF1A495AD90091133F /* UIAlertView+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Common.m"; sourceTree = "<group>"; };
+		30B42DF81A49012A00D8DA5B /* LYEncryptUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYEncryptUtils.h; sourceTree = "<group>"; };
+		30B42DF91A49012A00D8DA5B /* LYEncryptUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYEncryptUtils.m; sourceTree = "<group>"; };
+		30B42DFB1A4908A000D8DA5B /* LYTimeUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYTimeUtils.h; sourceTree = "<group>"; };
+		30B42DFC1A4908A000D8DA5B /* LYTimeUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYTimeUtils.m; sourceTree = "<group>"; };
+		30D25F2B19E918E90065AF67 /* LYSandBoxUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYSandBoxUtils.h; sourceTree = "<group>"; };
+		30D25F2C19E918E90065AF67 /* LYSandBoxUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYSandBoxUtils.m; sourceTree = "<group>"; };
 		3DA62DDF76E2A79ABE3CF621 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C02BD9280A0B887A3A2DFDE4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2172F0D67C593033CB1A445 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -266,8 +284,12 @@
 				3005BACC1904C7BC0006406B /* LYUtils.m */,
 				3005BAC91904C7BC0006406B /* LYUserInfo.h */,
 				3005BACA1904C7BC0006406B /* LYUserInfo.m */,
-				30D25F2B19E918E90065AF67 /* LYSandBoxManager.h */,
-				30D25F2C19E918E90065AF67 /* LYSandBoxManager.m */,
+				30D25F2B19E918E90065AF67 /* LYSandBoxUtils.h */,
+				30D25F2C19E918E90065AF67 /* LYSandBoxUtils.m */,
+				30B42DF81A49012A00D8DA5B /* LYEncryptUtils.h */,
+				30B42DF91A49012A00D8DA5B /* LYEncryptUtils.m */,
+				30B42DFB1A4908A000D8DA5B /* LYTimeUtils.h */,
+				30B42DFC1A4908A000D8DA5B /* LYTimeUtils.m */,
 				3005BACD1904C7BC0006406B /* GlobalConfig.h */,
 				3005BAC61904C7BC0006406B /* Category */,
 			);
@@ -313,6 +335,14 @@
 				30306A8B190766290001D4C3 /* UIView+Helper.m */,
 				30306A8C190766290001D4C3 /* UIViewController+Helper.h */,
 				30306A8D190766290001D4C3 /* UIViewController+Helper.m */,
+				308FC7A51A4939640091133F /* UILabel+Common.h */,
+				308FC7A61A4939640091133F /* UILabel+Common.m */,
+				308FC7A81A49398D0091133F /* UIButton+Common.h */,
+				308FC7A91A49398D0091133F /* UIButton+Common.m */,
+				308FC7AB1A4939B00091133F /* UIImageView+Common.h */,
+				308FC7AC1A4939B00091133F /* UIImageView+Common.m */,
+				308FC7AE1A495AD90091133F /* UIAlertView+Common.h */,
+				308FC7AF1A495AD90091133F /* UIAlertView+Common.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -459,12 +489,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				30306A8E190766290001D4C3 /* UIView+Helper.m in Sources */,
+				308FC7AD1A4939B00091133F /* UIImageView+Common.m in Sources */,
+				308FC7A71A4939640091133F /* UILabel+Common.m in Sources */,
 				3005BA561904C79B0006406B /* main.m in Sources */,
+				308FC7B01A495AD90091133F /* UIAlertView+Common.m in Sources */,
 				3005BAF11904C7BC0006406B /* LYUserInfo.m in Sources */,
 				3005BAEF1904C7BC0006406B /* NetWorkRequest.m in Sources */,
 				30306A8F190766290001D4C3 /* UIViewController+Helper.m in Sources */,
-				30D25F2D19E918E90065AF67 /* LYSandBoxManager.m in Sources */,
+				30B42DFD1A4908A000D8DA5B /* LYTimeUtils.m in Sources */,
+				30D25F2D19E918E90065AF67 /* LYSandBoxUtils.m in Sources */,
+				30B42DFA1A49012A00D8DA5B /* LYEncryptUtils.m in Sources */,
 				3005BAF21904C7BC0006406B /* LYUtils.m in Sources */,
+				308FC7AA1A49398D0091133F /* UIButton+Common.m in Sources */,
 				3005BAF01904C7BC0006406B /* NSString+Helper.m in Sources */,
 				3005BA5A1904C79B0006406B /* LYAppDelegate.m in Sources */,
 				3005BAEE1904C7BC0006406B /* DataManager.m in Sources */,

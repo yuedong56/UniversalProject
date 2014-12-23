@@ -6,9 +6,9 @@
 //  Copyright (c) 2014年 老岳. All rights reserved.
 //
 
-#import "LYSandBoxManager.h"
+#import "LYSandBoxUtils.h"
 
-@implementation LYSandBoxManager
+@implementation LYSandBoxUtils
 
 #pragma mark - 公共方法
 

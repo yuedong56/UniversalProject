@@ -10,14 +10,11 @@
 
 @interface NSString (Helper)
 
-/**
- *  是否空字符串
- */
-- (BOOL)isEmptyString;
-
-/**
- *  写入 NSUserDefaults
- */
-- (void)saveToUserDefaultsWithKey:(NSString *)key;
+/** 是否是有效的邮箱地址 */
+- (BOOL)isValidateEmail;
+/** 是否是有效的手机号 */
+- (BOOL)isValidatePhoneNumber;
+/** 是否是有效的身份证号 */
+- (BOOL)isValidateIDNumber;
 
 @end

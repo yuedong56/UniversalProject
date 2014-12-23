@@ -26,9 +26,6 @@
 /** 将id类型(如NSArray、NSDictionary)转为json字符串 */
 + (NSString *)toJsonStringWithData:(id)data;
 
-/** md5 16位加密 （小写）*/
-+ (NSString *)md5:(NSString *)str;
-
 /** 获取photo句柄单例 */
 + (ALAssetsLibrary *)defaultAssetsLibrary;
 
