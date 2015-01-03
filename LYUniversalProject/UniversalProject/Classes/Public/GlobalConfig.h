@@ -84,6 +84,10 @@
 //计算相邻坐标
 #define Right_X(view)  (view.frame.origin.x + view.frame.size.width)  //view右侧边缘的x坐标
 #define Down_Y(view)  (view.frame.origin.y + view.frame.size.height)  //view下方边缘的y坐标
+#define X(view) (view.frame.origin.x)
+#define Y(view) (view.frame.origin.y)
+#define W(view) (view.frame.size.width)
+#define H(view) (view.frame.size.height)
 
 //应用版本
 #define  App_Version  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
