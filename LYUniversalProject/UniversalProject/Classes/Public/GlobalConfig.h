@@ -81,6 +81,10 @@
 #define  Center_x(w) (ScreenWidth-w)/2.0  //控件宽度w，控件水平居中位置的x
 #define  Center_y(h, super_h)  (super_h-h)/2  //控件高度，控件垂直居位置的y
 
+//计算相邻坐标
+#define Right_X(view)  (view.frame.origin.x + view.frame.size.width)  //view右侧边缘的x坐标
+#define Down_Y(view)  (view.frame.origin.y + view.frame.size.height)  //view下方边缘的y坐标
+
 //应用版本
 #define  App_Version  [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleShortVersionString"]
 
