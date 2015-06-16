@@ -64,7 +64,7 @@
     return library;
 }
 
-/** 评分、升级 */
+/** 评分 */
 + (void)jumpToAppstore
 {
     NSString *iTunesLink = [NSString stringWithFormat:@"https://itunes.apple.com/cn/app/id%@?mt=8", AppID];

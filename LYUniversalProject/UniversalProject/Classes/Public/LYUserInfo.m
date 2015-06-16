@@ -7,8 +7,33 @@
 //
 
 #import "LYUserInfo.h"
-#import "NSString+Helper.h"
 
 @implementation LYUserInfo
+
+BOOL GlobalGetBoolValue(NSString* key) {
+    return [[NSUserDefaults standardUserDefaults] boolForKey: key];
+}
+
+void GlobalSetBoolValue(BOOL value, NSString* key) {
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    if ([userdefault objectIsForcedForKey:key]) {
+        [userdefault removeObjectForKey:key];
+    }
+    [userdefault setBool:value forKey:key];
+    [userdefault synchronize];
+}
+
+id GlobalGetValue(NSString* key) {
+    return [[NSUserDefaults standardUserDefaults] objectForKey: key];
+}
+
+void GlobalSetValue(id value, NSString* key) {
+    NSUserDefaults *userdefault = [NSUserDefaults standardUserDefaults];
+    if ([userdefault objectIsForcedForKey:key]) {
+        [userdefault removeObjectForKey:key];
+    }
+    [userdefault setObject:value forKey:key];
+    [userdefault synchronize];
+}
 
 @end

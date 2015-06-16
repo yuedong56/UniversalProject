@@ -28,6 +28,8 @@
 #import "LYEncryptUtils.h"
 #import "LYTimeUtils.h"
 
+#import "FrameAccessor.h"
+
 //AppDelegate
 #define APP_DELEGATE ((LYAppDelegate *)[[UIApplication sharedApplication] delegate])
 
@@ -48,9 +50,14 @@
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define IPhone4 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 960), [[UIScreen mainScreen] currentMode].size) : NO)
 #define IPhone5 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
-#define IOS7AndLater (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) ? YES : NO)
+#define IPhone6 ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(750, 1334), [[UIScreen mainScreen] currentMode].size) : NO)
+#define IPhone6Plus ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2208), [[UIScreen mainScreen] currentMode].size) : NO)
+
 #define IPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+
+#define IOS7AndLater (([[[UIDevice currentDevice] systemVersion] floatValue] >= 7) ? YES : NO)
 
 //颜色
 #define COLOR_RGBA(R, G, B, A) [UIColor colorWithRed:R/255.0 green:G/255.0 blue:B/255.0 alpha:A]

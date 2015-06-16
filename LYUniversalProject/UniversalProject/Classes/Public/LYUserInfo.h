@@ -11,4 +11,10 @@
 
 @interface LYUserInfo : NSObject
 
+BOOL GlobalGetBoolValue(NSString* key);
+void GlobalSetBoolValue(BOOL value, NSString* key);
+
+id   GlobalGetValue(NSString* key);
+void GlobalSetValue(id value, NSString* key);
+
 @end

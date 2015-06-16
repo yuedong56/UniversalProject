@@ -29,7 +29,7 @@
 /** 获取photo句柄单例 */
 + (ALAssetsLibrary *)defaultAssetsLibrary;
 
-/** 评分、升级 */
+/** 评分 */
 + (void)jumpToAppstore;
 
 #pragma mark - 本工程公共方法
