@@ -8,41 +8,47 @@
 
 
 #import "DataManager.h"
+#import <FMDB/FMDatabaseQueue.h>
+#import <FMDB/FMDatabase.h>
+
+@interface DataManager ()
+
+@property(strong, nonatomic) FMDatabaseQueue *databaseQueue;
+
+@end
+
+
 
 @implementation DataManager
 
-+ (id)instance
++ (instancetype)instance
 {
-    static DataManager *instance = nil;
-    @synchronized (self)
-    {
-        if (instance == nil)
-        {
-            instance = [[DataManager alloc] init];
-        }
-    }
-    return instance;
+    static DataManager *manager;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        manager = [[self alloc] init];
+    });
+    return manager;
 }
 
-- (id)init
+- (instancetype)init
 {
     self = [super init];
     if (self) {
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *databasePath= [[paths objectAtIndex:0] stringByAppendingPathComponent:DataFileName];
-        
-        NSFileManager *fileManager = [NSFileManager defaultManager];
-        if(![fileManager fileExistsAtPath:databasePath]) {
-            NSString *databasePathFromApp = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DataFileName];
-            [fileManager copyItemAtPath:databasePathFromApp toPath:databasePath error:nil];
+        NSString *toPath = [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingPathComponent:DataFileName];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:toPath]) {
+            NSString *fromPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:DataFileName];
+            [[NSFileManager defaultManager] copyItemAtPath:fromPath toPath:toPath error:nil];
         }
         
-        self.ettDB = [FMDatabase databaseWithPath:databasePath];
-        if (![self.ettDB open]) {
-            CLog(@"Could not open db.");
-        }
+        self.databaseQueue = [FMDatabaseQueue databaseQueueWithPath:toPath];
+        [self.databaseQueue inDatabase:^(FMDatabase *db) {
+            [db setMaxBusyRetryTimeInterval:5];
+        }];
     }
     return self;
 }
+
+
 
 @end

@@ -10,12 +10,9 @@
 #define DataFileName @"DataFileName.sqlite" //数据库文件名
 
 #import <Foundation/Foundation.h>
-#import <FMDatabase.h>
 
 @interface DataManager : NSObject
 
-@property (nonatomic, strong) FMDatabase *ettDB;
-
-+ (id)instance;
++ (instancetype)instance;
 
 @end
