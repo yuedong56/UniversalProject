@@ -25,7 +25,7 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     
-    
+    ///水电费立刻就立刻记录卡几十块来得及
     return YES;
 }
 
